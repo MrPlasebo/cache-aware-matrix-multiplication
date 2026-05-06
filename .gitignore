@@ -1,7 +1,0 @@
-naive
-optimized
-*.exe
-*.out
-*.o
-.vscode/
-.DS_Store
