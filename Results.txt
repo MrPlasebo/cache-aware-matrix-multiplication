@@ -1,0 +1,147 @@
+Cache-Aware Optimization of Matrix Multiplication
+Experimental Results
+
+Environment:
+- Linux / WSL Ubuntu
+- GCC compiler
+- Programming Language: C
+- Same random seed used for both implementations
+
+Project Goal:
+This project compares a naive matrix multiplication implementation with an optimized version.
+The optimized version changes the loop order to improve memory access behavior.
+
+------------------------------------------------------------
+Test 1 - Matrix Size: 1000 x 1000
+------------------------------------------------------------
+
+Sample Output:
+C[0][0] = 20287
+
+Naive Version:
+Run 1: 3.194523 seconds
+Run 2: 3.100104 seconds
+Run 3: 3.090787 seconds
+Average: 3.128471 seconds
+
+Optimized Version:
+Run 1: 2.412947 seconds
+Run 2: 2.396749 seconds
+Run 3: 2.404487 seconds
+Average: 2.404728 seconds
+
+Difference:
+3.128471 - 2.404728 = 0.723744 seconds
+
+Improvement:
+23.13%
+
+Observation:
+For 1000 x 1000 matrices, the optimized version is significantly faster than the naive version.
+
+
+------------------------------------------------------------
+Test 2 - Matrix Size: 700 x 700
+------------------------------------------------------------
+
+Sample Output:
+C[0][0] = 14200
+
+Naive Version:
+Run 1: 0.934399 seconds
+Run 2: 0.968302 seconds
+Run 3: 0.940178 seconds
+Average: 0.947626 seconds
+
+Optimized Version:
+Run 1: 0.841577 seconds
+Run 2: 0.825331 seconds
+Run 3: 0.875369 seconds
+Average: 0.847426 seconds
+
+Difference:
+0.947626 - 0.847426 = 0.100201 seconds
+
+Improvement:
+10.57%
+
+Observation:
+For 700 x 700 matrices, the optimized version also shows a clear performance improvement.
+
+
+------------------------------------------------------------
+Test 3 - Matrix Size: 500 x 500
+------------------------------------------------------------
+
+Sample Output:
+C[0][0] = 10195
+
+Naive Version:
+Run 1: 0.282662 seconds
+Run 2: 0.283263 seconds
+Run 3: 0.282466 seconds
+Average: 0.282797 seconds
+
+Optimized Version:
+Run 1: 0.277577 seconds
+Run 2: 0.278517 seconds
+Run 3: 0.278469 seconds
+Average: 0.278188 seconds
+
+Difference:
+0.282797 - 0.278188 = 0.004609 seconds
+
+Improvement:
+1.63%
+
+Observation:
+For 500 x 500 matrices, the optimized version is slightly faster than the naive version.
+
+
+------------------------------------------------------------
+Test 4 - Matrix Size: 300 x 300
+------------------------------------------------------------
+
+Sample Output:
+C[0][0] = 6363
+
+Naive Version:
+Run 1: 0.070009 seconds
+Run 2: 0.066337 seconds
+Run 3: 0.064357 seconds
+Average: 0.066901 seconds
+
+Optimized Version:
+Run 1: 0.065271 seconds
+Run 2: 0.065585 seconds
+Run 3: 0.063704 seconds
+Average: 0.064853 seconds
+
+Difference:
+0.066901 - 0.064853 = 0.002048 seconds
+
+Improvement:
+3.06%
+
+Observation:
+For 300 x 300 matrices, the optimized version is still faster, but the difference is small because the matrix size is smaller.
+
+
+------------------------------------------------------------
+Summary Table
+------------------------------------------------------------
+
+Matrix Size | Naive Average (s) | Optimized Average (s) | Difference (s) | Improvement
+1000 x 1000 | 3.128471          | 2.404728              | 0.723744       | 23.13%
+700 x 700   | 0.947626          | 0.847426              | 0.100201       | 10.57%
+500 x 500   | 0.282797          | 0.278188              | 0.004609       | 1.63%
+300 x 300   | 0.066901          | 0.064853              | 0.002048       | 3.06%
+
+
+Conclusion:
+The optimized matrix multiplication version produced the same sample output as the naive version for each matrix size.
+This confirms that the optimized version keeps the mathematical result consistent.
+
+The optimized version had lower average execution time in all tests.
+The performance improvement became more visible with larger matrix sizes, especially in the 1000 x 1000 test.
+This supports the idea that loop order and memory access behavior can affect execution time.
