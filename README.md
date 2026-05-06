@@ -25,12 +25,7 @@ cache-aware-matrix-multiplication/
 │   ├── naive_matrix.c
 │   └── optimized_matrix.c
 │
-├── results/
-│   └── results.txt
-│
-├── presentation/
-│   └── Cache_Aware_Matrix_Multiplication_Presentation_Mirsad_Ozkan_v3.pptx
-│
+├── Results.txt
 ├── README.md
 ├── Makefile
 └── .gitignore
