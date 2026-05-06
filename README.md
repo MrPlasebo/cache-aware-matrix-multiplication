@@ -26,6 +26,7 @@ cache-aware-matrix-multiplication/
 │   └── optimized_matrix.c
 │
 ├── Results.txt
+├── final_report.pdf
 ├── README.md
 ├── Makefile
 └── .gitignore
